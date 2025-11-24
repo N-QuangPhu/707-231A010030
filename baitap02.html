@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bài 2 - Form đăng ký demo, lưu người dùng vào LocalStorage">
+    <title>Bài 2 - Form đăng ký</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <a class="visually-hidden" href="#main">Bỏ qua tới nội dung chính</a>
+</head>
+<body>
+    <header class="container">
+        <h1>Bài tập 2</h1>
+        <nav aria-label="Điều hướng chính"><a href="index.html">← Quay lại trang chủ</a></nav>
+    </header>
+
+    <main id="main" class="container">
+        <form id="registerForm" class="form" novalidate>
+            <input type="text" id="name" placeholder="Họ và tên" required aria-label="Họ và tên">
+            <input type="email" id="email" placeholder="Email" required aria-label="Email">
+            <input type="password" id="password" placeholder="Mật khẩu" required aria-label="Mật khẩu">
+            <label><input type="checkbox" id="terms" required> Tôi đồng ý với điều khoản dịch vụ</label>
+            <div id="error" class="error" aria-live="polite"></div>
+            <button type="submit">Đăng ký</button>
+        </form>
+    </main>
+
+    <footer>
+        <div class="container"><p>&copy; 2025 707-231A010030</p></div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

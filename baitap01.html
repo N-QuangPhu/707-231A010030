@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bài 1 - Danh sách sản phẩm kèm tìm kiếm realtime">
+    <title>Bài 1 - Danh sách sản phẩm</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <a class="visually-hidden" href="#main">Bỏ qua tới nội dung chính</a>
+</head>
+<body>
+    <header class="container">
+        <h1>Bài tập 1</h1>
+        <nav aria-label="Điều hướng chính"><a href="index.html">← Trang chủ</a></nav>
+    </header>
+
+    <main id="main" class="container">
+        <input type="text" id="search" placeholder="Tìm kiếm sản phẩm..." class="search-box" aria-label="Tìm kiếm sản phẩm">
+        <div id="error" class="error">Không tìm thấy sản phẩm nào!</div>
+        <div id="product-list" class="grid" aria-live="polite"></div>
+    </main>
+
+    <footer>
+        <div class="container"><p>&copy; 2025 707-231A010030</p></div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        const products = [
+            { name: "Laptop Dell XPS 9350 Ultra", price: "35.500.000 ₫", img: "images/product1.jpg" },
+            { name: "iPhone 17 Pro Max", price: "63.990.000 ₫", img: "images/product2.jpg" },
+            { name: "Tai nghe AirPods Pro 2", price: "5.100.000 ₫", img: "images/product3.jpg" },
+            { name: "Máy ảnh Sony A7 IV", price: "47.490.000 ₫", img: "images/product4.jpg" },
+            { name: "Bàn phím Keychron K8", price: "2.200.000 ₫", img: "images/product5.jpg" }
+        ];
+        // initial render (script.js also sets up live search if present)
+        window.renderProducts && window.renderProducts(products);
+    </script>
+</body>
+</html>

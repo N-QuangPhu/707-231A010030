@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bài 3 - Đồng hồ đếm ngược 10 phút với vòng tiến trình">
+    <title>Bài 3 - Đồng hồ đếm ngược 10 phút</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <a class="visually-hidden" href="#main">Bỏ qua tới nội dung chính</a>
+</head>
+<body>
+    <header class="container">
+        <h1>Bài tập 3</h1>
+        <nav aria-label="Điều hướng chính"><a href="index.html">← Trang chủ</a></nav>
+    </header>
+
+    <main id="main" class="container timer-page">
+        <div class="countdown-circle" role="img" aria-label="Đồng hồ đếm ngược">
+            <svg width="300" height="300" viewBox="0 0 300 300" aria-hidden="true">
+                <circle class="bg-circle" cx="150" cy="150" r="140"></circle>
+                <circle class="progress-circle" cx="150" cy="150" r="140"></circle>
+            </svg>
+            <div class="time-display" id="timer">10:00</div>
+        </div>
+
+        <div class="controls">
+            <button id="startBtn">Bắt đầu</button>
+            <button id="stopBtn" disabled>Stop</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+
+        <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+            <div>
+                <h2>⏰ Hết giờ rồi!</h2>
+                <button id="closeModal">Đóng</button>
+            </div>
+        </div>
+    </main>
+
+    <audio id="alarm" src="https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mp3"></audio>
+
+    <script src="js/script.js"></script>
+    <script>
+        // start the timer when page loads
+        startModernCountdown();
+        document.getElementById('closeModal').addEventListener('click', function(){
+            document.getElementById('modal').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
